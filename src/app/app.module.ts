@@ -1,8 +1,7 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
-
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent }  from './app.component';
 import { HeroDetailComponent } from './hero-detail.component';
 import { HeroesComponent } from './heroes.component';
@@ -13,12 +12,7 @@ import { DashboardComponent } from './dashboard.component';
   imports: [ 
       BrowserModule,
       FormsModule,
-      RouterModule.forRoot([
-          {path: 'detail/:id', component: HeroDetailComponent},
-          {path: 'heroes', component: HeroesComponent},
-          {path: 'dashboard', component: DashboardComponent},
-          {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
-      ])
+      AppRoutingModule
   ],
   declarations: [ 
     AppComponent,
